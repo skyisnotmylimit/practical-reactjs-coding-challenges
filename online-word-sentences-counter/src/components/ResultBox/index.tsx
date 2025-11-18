@@ -1,26 +1,26 @@
 import './index.scss'
-
-const ResultBox = () => {
+import { resultDataType } from '../../utils/calculateData'
+const ResultBox = ({ resultData }: { resultData: resultDataType }) => {
   const resultBar = [
     {
       title: 'Words',
-      value: 0,
+      value: resultData.words || 0,
     },
     {
       title: 'Characters',
-      value: 0,
+      value: resultData.characters || 0,
     },
     {
       title: 'Sentences',
-      value: 0,
+      value: resultData.sentences || 0,
     },
     {
       title: 'Paragraphs ',
-      value: 0,
+      value: resultData.paragraphs || 0,
     },
     {
       title: 'Pronouns',
-      value: 0,
+      value: resultData.pronouns || 0,
     },
   ]
 

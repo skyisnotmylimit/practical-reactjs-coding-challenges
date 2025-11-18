@@ -1,14 +1,19 @@
 import './index.scss'
+import { resultDataType } from '../../utils/calculateData'
 
-const BottomResultBox = () => {
+type BottomResultBoxProps = {
+  resultData: resultDataType
+}
+
+const BottomResultBox = ({ resultData }: BottomResultBoxProps) => {
   const bottomResultBar = [
     {
       title: 'Average Reading Time:',
-      value: '-',
+      value: resultData.averageReadTime || '-',
     },
     {
       title: 'Longest word:',
-      value: '-',
+      value: resultData.longestWord || '-',
     },
   ]
 
